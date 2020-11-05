@@ -142,7 +142,62 @@ function setItems(product) {
 
 }
 
-function totalCost() {//whenever we loop through all the items in addToCart we will use this
+function totalCost(product) {//whenever we loop through all the items in addToCart we will use this
+//console.log("The product price is", product.price)
+    let cartCost = localStorage.getItem('totalCost');
 
+    console.log("My CartCost is ", cartCost);
+   console.log(typeof cartCost);
+
+   if (cartCost !=null){
+       cartCost = parseInt(cartCost);
+     localStorage.setItem("totalCost", cartCost + product.price);
+   }else {
+       localStorage.setItem("totalCost", product.price);
+   }
+}
+
+function displayCart() {
+let cartItems = localStorage.getItem("ProductsInCart");
+cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products-container");
+    let cartCost = localStorage.getItem('totalCost');
+    /*console.log(cartItems);*/
+    if (cartItems && productContainer){
+        productContainer.innerHTML ='';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+              <div class="product">
+              <ion-icon name="close-circle" ></ion-icon>
+                <img src="./images/${item.tag}.jpg" width="100px" height="200px"  alt="">
+                    <span>${item.name}</span>
+                </div>
+                
+                </div class=price>${item.price}</div>
+                <div class="quantity">
+                 <ion-icon class="decrease" name="arrow-dropleft-circle" ></ion-icon>
+                  <span>${item.inCart}</span>
+                  <ion-icon class="increase" name="arrow-dropright-circle" ></ion-icon>
+               </div>
+               
+               <div class="total">
+                 ${item.inCart * item.price},00
+              </div>
+           
+                `
+        });
+        //console.log("running");
+
+        productContainer.innerHTML +=`
+         <div class="basketTotalContainer">
+         <h4 class="basketTotalTitle">
+         </h4 class="">
+         <h4>
+         
+</h4>
+          
+        `
+    }
 }
 onLoadCartNumbers();//this will run whenever the page is run for 1st time and check if there exist any available stored cart in localstorage
+displayCart()
