@@ -1,0 +1,6 @@
+*{ /*1 default settings css*/
+    margin: 0;/*2*/
+    padding: 0;/*3*/
+    box-sizing: border-box;/*4*/
+    font-family: 'Roboto',sans-serif;/*4*/
+}
