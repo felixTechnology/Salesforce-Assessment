@@ -2,77 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!--1-->
-    <!--<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> &lt;!&ndash;3&ndash;&gt;-->
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="stylesheet" href="styles.css"><!--2-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Shopping Cart</title>
-
 </head>
 <body>
+    <header><!--HEADER-->
+        <div class="overlay"></div>
+        <nav>
+            <h2>SHOP</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="container">
+        <div class="image">
+            <img src="images/footwear.jpg"width="247px" height="296px" alt="thsirt1">
+            <h3>Footwear</h3>
+            <h3>GHC 100.00</h3>
+            <a class="add-cart cart1" href="#">Add Cart</a>
+            <input type="hidden" value="15" />
+        </div>
+        <div class="image">
+            <img src="images/jeansLady.jpg" width="247px" height="296px" alt="thsirt1">
+            <h3>Ladies Jean</h3>
+            <h3>GHC  150.00 </h3>
+            <a class="add-cart cart2" href="#">Add Cart</a>
+            <input type="hidden" value="20" />
+        </div>
 
-  <!--Header Section-->
-  <header>
-      <!--1. div.overlay-->
-      <div class="overlay"></div>
-      <!--2. nav-->
-      <nav><!--3-->
-          <h2>SHOP</h2><!--4-->
-          <ul><!--5 Unordered List-->
-              <li><a href="index.html">Home</a></li><!--6. referencing the index html-->
-              <li><a href="#">About</a></li><!--7.-->
-              <!--ionicons.com-->
-              <li class="cart"><a href="cart.html"><ion-icon name="basket"></ion-icon> Cart<span>0</span></a></li><!--8.Redirecting to same page-->
-          </ul><!--5 END Unordered List-->
-      </nav>
-  </header>
-  <!--End of Header Section-->
+        <div class="image">
+            <img src="images/ladieswear.jpg" width="247px" height="296px" alt="thsirt1">
+            <h3>ladies Wear</h3>
+            <h3> GHC 50.00</h3>
+            <a class="add-cart cart3" href="#">Add Cart</a>
+            <input type="hidden" value="15" />
+        </div>
+        <div class="image">
+            <img src="images/swimmer.jpg" width="247px" height="296px" alt="thsirt1">
+            <h3>Swimmer</h3>
+            <h3> GHC 250.00</h3>
+            <a class="add-cart cart4" href="#">Add Cart</a>
+            <input type="hidden" value="20" />
+        </div>
+    </div>
 
-  <div class="container">
-      <!--CONTAINER -->
-      <div class="image">
-          <img style=" " src="images/footwear.jpg " width="100px" height="200px" alt="footwear">
-          <h3>Footwear</h3>
-          <h3>GHC 120</h3>
-          <a href="#" class="add-cart cart1">Add Cart</a>
-
-
-      </div>
-
-      <div class="image">
-          <img src="images/jeansLady.jpg" width="100px" height="200px" alt="jeans">
-          <h3>Jeans</h3>
-          <h3>GHC 50</h3>
-          <a href="#" class="add-cart cart2">Add Cart</a>
-
-
-      </div>
-
-      <div class="image">
-          <img src="images/ladieswear.jpg" width="100px" height="200px"  alt="Ladies wear">
-          <h3>Ladies Wear</h3>
-          <h3>GHC 200</h3>
-          <a href="#" class="add-cart cart3">Add Cart</a>
-
-      </div>
-
-      <div class="image">
-          <img src="images/swimmer.jpg" width="100px" height="200px"  alt="swimming Costume">
-          <h3>Swimming</h3>
-          <h3>GHC 200</h3>
-          <a href="#" class="add-cart cart4">Add Cart</a>
-
-      </div>
-
-      <!--END CONTAINER -->
-
-  </div>
-
-  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-
-  <!--<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>-->
-  <script src="main.js"></script>
+    <script src="main.js"></script>
+    <!--<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>-->
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
